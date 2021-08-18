@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.9.4.2019-12-01.CD-498-0-a1ffcea" icon="Custom1.png">
+    <title>Adafruit Batteries</title>
+    <instances>
+        <instance moduleIdRef="adafruit_9f330ae1329f388f881a4190f18ee6b2_1" modelIndex="85433702" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_9f330ae1329f388f881a4190f18ee6b2_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_cb384e1c6b261660335a47c107b6094d_1" modelIndex="85433703" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_cb384e1c6b261660335a47c107b6094d_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_9941dcffc7dc876d4d94af6d90d00e5d_1" modelIndex="85433704" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_9941dcffc7dc876d4d94af6d90d00e5d_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_ebb16d8ee99edfe84d904adfa5bc42e8_1" modelIndex="85433705" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_ebb16d8ee99edfe84d904adfa5bc42e8_1.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_3c690712a61964ce15564fa095f31177_4" modelIndex="85433706" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_3c690712a61964ce15564fa095f31177_4.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_9e2319995736c0d3fac9afe467a14306_4" modelIndex="85433707" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_9e2319995736c0d3fac9afe467a14306_4.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_5428d3df520ffe116f4c840cc6527430_4" modelIndex="85433708" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_5428d3df520ffe116f4c840cc6527430_4.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_6ad2e227ba1623bbcd120b924e6f56a3_6" modelIndex="85433709" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_6ad2e227ba1623bbcd120b924e6f56a3_6.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_e2678fc2111242b0f08aed88410fda25_4" modelIndex="85433710" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_e2678fc2111242b0f08aed88410fda25_4.fzp">
+            <views/>
+        </instance>
+        <instance moduleIdRef="adafruit_09283c2612963e0eb1be99ddb886cbb7_4" modelIndex="85433711" path="C:/Users/trist/OneDrive/Documents/Fritzing/parts/contrib/adafruit_09283c2612963e0eb1be99ddb886cbb7_4.fzp">
+            <views/>
+        </instance>
+    </instances>
+</module>
