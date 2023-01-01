@@ -24,6 +24,381 @@ LED_RGB::LED_RGB()
     tc_status = false;
 }
 
+String LED_RGB::id()
+{
+  return info.id;
+}
+
+String LED_RGB::pin()
+{
+  String pins = String(info.pin_LED_R) + ", " + String(info.pin_LED_G) + ", " + String(info.pin_LED_B);
+  return pins;
+}
+
+uint32_t LED_RGB::colour()
+{
+   uint32_t set_colour;
+   
+    if(red > 192)
+    {
+      if(green > 192)
+      {
+        if(blue > 192)
+        {
+          set_colour = YELLOW;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = YELLOW;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = ORANGE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = ORANGE;
+        }
+      }
+      else if ((green < 192) && (green > 128))
+      {
+        if(blue > 192)
+        {
+          set_colour = WHITE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = YELLOW;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = YELLOW;
+        }
+        else //(blue < 64)
+        {
+          set_colour = ORANGE;
+        }
+      }
+      else if ((green < 128) && (green > 64))
+      {
+         if(blue > 192)
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = PURPLE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = RED;
+        } 
+      }
+      else //(green < 64)
+      {
+        if(blue > 192)
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = PURPLE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = RED;
+        }
+      }
+    }
+    
+    else if ((red < 192) && (red > 128))
+    {
+      if(green > 192)
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        }
+      }
+      else if ((green < 192) && (green > 128))
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = WHITE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        }
+      }
+      else if ((green < 128) && (green > 64))
+      {
+        if(blue > 192)
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = WHITE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = WHITE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = WHITE;
+        } 
+      }
+      else //(green < 64)
+      {
+        if(blue > 192)
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = PURPLE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = YELLOW;
+        }
+      }
+    }
+
+    else if ((red < 128) && (red > 64))
+    {
+      if(green > 192)
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        }
+      }
+      else if ((green < 192) && (green > 128))
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        }
+      }
+      else if ((green < 128) && (green > 64))
+      {
+         if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = WHITE;
+        } 
+      }
+      else //(green < 64)
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = PURPLE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = PURPLE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = PURPLE;
+        }
+      }      
+    }
+    
+    else //(red < 64)
+    {
+      if(green > 192)
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = GREEN;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        }
+      }
+      else if ((green < 192) && (green > 128))
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        }
+      }
+      else if ((green < 128) && (green > 64))
+      {
+         if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE; 
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = GREEN;
+        } 
+      }
+      else //(green < 64)
+      {
+        if(blue > 192)
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 192) && (blue > 128))
+        {
+          set_colour = BLUE;
+        }
+        else if ((blue < 128) && (blue > 64))
+        {
+          set_colour = BLUE;
+        }
+        else //(blue < 64)
+        {
+          set_colour = PURPLE;
+        }
+      }
+    }
+
+  tc_colour = set_colour;
+  tc_colour_txt = colour_txt();
+  return tc_colour;
+}
+
+String LED_RGB::colour_txt()
+{
+  switch(tc_colour)
+  {
+    case WHITE:
+      tc_colour_txt = "WHITE";
+      break;
+    case RED:
+      tc_colour_txt = "RED";
+      break;
+    case ORANGE:
+      tc_colour_txt = "ORANGE";
+      break;
+    case YELLOW:
+      tc_colour_txt = "YELLOW";
+      break;
+    case GREEN:
+      tc_colour_txt = "GREEN";
+      break;
+    case BLUE:
+      tc_colour_txt = "BLUE";
+      break;
+    case PURPLE:
+      tc_colour_txt = "PURPLE";
+      break;
+    case BLACK:
+      tc_colour_txt = "OFF";
+    case COLOUR:
+    default:
+      tc_colour_txt = "      ";      
+      break;  
+  }
+ return tc_colour_txt;
+}
+
 //#init - setup
 void LED_RGB::init()
 {
@@ -53,6 +428,9 @@ void LED_RGB::on()
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
   tc_status = true;
+  tc_colour = WHITE;
+  tc_colour_txt = colour_txt();
+  
 }
 
 //#RGB OFF
@@ -65,6 +443,8 @@ void LED_RGB::off()
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
   tc_status = false;
+  tc_colour = BLACK;
+  tc_colour_txt = colour_txt();
 }
 
 //#RGB toggle
@@ -96,6 +476,8 @@ void LED_RGB::go_red()
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
   tc_status = true;
+  tc_colour = RED;
+  tc_colour_txt = colour_txt();
 }
 
 //#RGB - green
@@ -108,6 +490,8 @@ void LED_RGB::go_green()
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
   tc_status = true;
+  tc_colour = GREEN;
+  tc_colour_txt = colour_txt();
 }
 
 //#RGB - blue
@@ -120,6 +504,8 @@ void LED_RGB::go_blue()
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
   tc_status = true;
+  tc_colour = BLUE;
+  tc_colour_txt = colour_txt();
 }
 
 //#RGB flash - RGB
@@ -197,6 +583,9 @@ void LED_RGB::set_colour(int r, int g, int b)
   analogWrite(info.pin_LED_R, red);
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
+  tc_status = true;
+  tc_colour = colour();
+  tc_colour_txt = colour_txt();
 }
 
 //#RGB - white
@@ -209,6 +598,8 @@ void LED_RGB::go_white()
   analogWrite(info.pin_LED_G, green);
   analogWrite(info.pin_LED_B, blue);
   tc_status = true;
+  tc_colour = WHITE;
+  tc_colour_txt = colour_txt();
 }
 
 //#RGB - flash white

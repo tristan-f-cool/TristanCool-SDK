@@ -24,6 +24,17 @@ LED::LED()
     tc_status = false;
 }
 
+String LED::id()
+{
+  return info.id;
+}
+
+uint8_t LED::pin()
+{
+  return info.pin_LED;
+}
+
+
 //#init
 void LED::init()
 {
@@ -134,15 +145,19 @@ void LED::set_brightness(int level)
 {
   if(level < 0)
   {
-    level = 15;
+    level = 0;
   }
   if(level > 100)
   {
     level = 100;
   }
-  level = map(level,0,100,0,255);
+  int val = map(level,0,100,0,255);
   brightness = level;
-  analogWrite(info.pin_LED, level);
+  analogWrite(info.pin_LED, val);
+  if(level != 0)
+    tc_status = true;
+  else
+    tc_status = false;
 }
 
 //#LED fade
