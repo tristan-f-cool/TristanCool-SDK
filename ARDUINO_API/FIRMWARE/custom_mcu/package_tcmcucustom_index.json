@@ -1,0 +1,60 @@
+{
+  "packages":
+  [
+    {
+      "name": "tc_mcu_custom",
+      "maintainer": "Tristan Cool SDK",
+      "websiteURL": "https://github.com/tristan-f-cool/TristanCool-SDK",
+      "email" : "tristan.f.cool@gmail.com",
+      "platforms":
+      [
+        {
+          "name": "TC MCU Custom",
+          "architecture": "avr",
+          "version": "0.0.1",
+          "category": "Contributed",
+          "url": "https://github.com/tristan-f-cool/TristanCool-SDK/tree/master/ARDUINO_API/FIRMWARE",
+          "archiveFileName": "TCMCUCustom-0.0.1.zip",
+          "checksum": "3337564a9859dd4965ef666e05deba79",
+          "size": "6053025",
+          "boards": [
+            {
+              "name": "TC MCU Custom"
+            }
+          ],
+          "toolsDependencies":
+          [
+            {
+              "packager": "arduino",
+              "name": "arm-none-eabi-gcc",
+              "version": "7-2017q4"
+            },
+            {
+              "packager": "arduino",
+              "name": "bossac",
+              "version": "1.8.0-48-gb176eee"
+            },
+            {
+              "packager": "arduino",
+              "name": "openocd",
+              "version": "0.10.0-arduino9"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS",
+              "version": "4.5.0"
+            },
+            {
+              "packager": "arduino",
+              "name": "CMSIS-Atmel",
+              "version": "1.2.0"
+            }
+          ]
+        }
+      ],
+      "tools":
+      [
+      ]
+    }
+  ]
+}
