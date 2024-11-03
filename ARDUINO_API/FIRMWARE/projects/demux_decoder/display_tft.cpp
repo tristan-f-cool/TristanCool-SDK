@@ -182,8 +182,8 @@ TSPoint Display_TFT::read_touch()
   else
   {
     //set points to center and presure to 0
-    touch_point.x = X_CENTRE;
-    touch_point.y = Y_CENTRE;
+    touch_point.x = X_MAX; //
+    touch_point.y = Y_MAX;
     touch_point.z = 0;
   }
    
